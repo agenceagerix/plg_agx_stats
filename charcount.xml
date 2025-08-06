@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_CHARCOUNT</name>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_CHARCOUNT_DESC</description>
+    <author>Emmanuel Danan</author>
+    <creationDate>2025-08-04</creationDate>
+    <license>GNU General Public License version 2 or later</license>
+    <files>
+        <filename plugin="charcount">charcount.php</filename>
+        <folder>language</folder>
+    </files>
+    <administration>
+        <languages folder="language">
+            <language tag="fr-FR">fr-FR/fr-FR.plg_system_charcount.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.plg_system_charcount.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_charcount.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_charcount.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                    name="show_title" 
+                    type="checkbox"
+                    label="PLG_SYSTEM_TITLECHARCOUNT_SHOW"
+                    default="1"
+                />
+
+                <field 
+                    name="show_meta" 
+                    type="checkbox"
+                    label="PLG_SYSTEM_METACHARCOUNT_SHOW"
+                    default="1"
+                />
+
+                <field 
+                    name="long_max_title" 
+                    type="number"
+                    label="PLG_SYSTEM_TITLECHARCOUNT_PARAM_LENGTH_LABEL"
+                    default="70"
+                    filter="integer"
+                    validate="number"
+                />
+
+                <field 
+                    name="long_max_meta" 
+                    type="number"
+                    label="PLG_SYSTEM_METACHARCOUNT_PARAM_LENGTH_LABEL"
+                    default="300"
+                    filter="integer"
+                    validate="number"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
