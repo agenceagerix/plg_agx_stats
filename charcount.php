@@ -122,6 +122,7 @@ class PlgSystemCharCount extends CMSPlugin
             <?php
         }
 
+        // If the counter for the meta description is activated...
         if ($isActivatedMeta == '1'){
             ?>
 
